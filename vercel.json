@@ -10,7 +10,7 @@
       "src": "build_files.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "services/media"
+        "distDir": "staticfiles"
       }
     }
   ],
@@ -24,5 +24,5 @@
       "dest": "Household_Backend/wsgi.py"
     }
   ],
-  "outputDirectory": "services/media"
+  "outputDirectory": "staticfiles"
 }
