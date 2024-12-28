@@ -21,7 +21,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "Household_Backend/wsgi.py/wsgi.py"
+      "dest": "Household_Backend/wsgi.py"
     }
   ]
 }
