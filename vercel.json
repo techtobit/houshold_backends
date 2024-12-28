@@ -16,13 +16,12 @@
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
+      "src": "/media/(.*)",
+      "dest": "/media/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "Household_Backend/wsgi.py"
+      "dest": "Household_Backend/wsgi.py/wsgi.py"
     }
-  ],
-  "outputDirectory": "staticfiles"
+  ]
 }
