@@ -11,9 +11,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*", '.vercel.app', ".now.sh"]
 
-CORS_ALLOWED_ORIGINS = [ 
-    'https://house-hold-theta.vercel.app/',
-]
+# CORS_ALLOWED_ORIGINS = [ 
+#     'https://house-hold-theta.vercel.app/',
+# ]
 
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
@@ -145,27 +145,17 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    os.path.join(BASE_DIR, 'static')
 ]
 
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
-
-MEDIA_URL = ''
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 if not DEBUG:
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
