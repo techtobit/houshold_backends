@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "manage.py",
+      "src": "asgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     },
@@ -25,7 +25,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "manage.py"
+      "dest": "asgi.py"
     }
   ]
 }
